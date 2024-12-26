@@ -7,25 +7,36 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Learning Page</h1>
-    </header>
-    <main>
-        <section>
-            <h2>Videos</h2>
-            <video controls width="600">
-                <source src="sample.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </section>
-        <section>
-            <h2>Presentations</h2>
-            <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQ9..." width="600" height="400"></iframe>
-        </section>
-    </main>
-    <footer>
-        <p>© 2024 My Learning Page</p>
-    </footer>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2>Contents</h2>
+            <ul class="tree">
+                <li>
+                    <span onclick="toggleSubmenu('videos')">Videos</span>
+                    <ul id="videos" class="submenu">
+                        <li><a href="#" onclick="loadContent('video1.mp4')">Video 1</a></li>
+                        <li><a href="#" onclick="loadContent('video2.mp4')">Video 2</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <span onclick="toggleSubmenu('presentations')">Presentations</span>
+                    <ul id="presentations" class="submenu">
+                        <li><a href="#" onclick="loadContent('presentation1')">Presentation 1</a></li>
+                        <li><a href="#" onclick="loadContent('presentation2')">Presentation 2</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="content">
+            <h1>Welcome to My Learning Page</h1>
+            <div id="dynamic-content">
+                <p>Select a video or presentation from the menu.</p>
+            </div>
+        </main>
+    </div>
     <script src="scripts.js"></script>
 </body>
 </html>
