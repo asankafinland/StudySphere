@@ -2,17 +2,63 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
+    display: flex;
+    height: 100vh;
 }
-header {
-    background-color: #007bff;
-    color: white;
-    text-align: center;
+
+.container {
+    display: flex;
+    width: 100%;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #f4f4f4;
     padding: 20px;
+    border-right: 1px solid #ddd;
 }
-main {
-    padding: 20px;
-}
-section {
+
+.sidebar h2 {
+    font-size: 20px;
     margin-bottom: 20px;
+}
+
+.tree {
+    list-style: none;
+    padding: 0;
+}
+
+.tree li {
+    margin-bottom: 10px;
+}
+
+.tree .submenu {
+    margin-left: 20px;
+    display: none;
+    list-style-type: circle;
+}
+
+.tree li span {
+    cursor: pointer;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.tree li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.tree li a:hover {
+    text-decoration: underline;
+}
+
+.content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #fff;
+}
+
+#dynamic-content {
+    margin-top: 20px;
 }
